@@ -4,11 +4,7 @@
     "dev:client": "nextjs src/client",
     "dev:server": "node src/server --out-dir dist/server --source-maps --watch",
     "dev": "next dev",
-    "build": "next build:client && next build:server",
-    "build:client": "dotenv -e .env.production next build src/client",
-    "build:server": "node src/server --out-dir dist/server --source-maps",
-    "build:staging": "next build:staging:client && next build:server",
-    "build:staging:client": "dotenv -e .env.staging next build src/client",
+    "build": "webpack",
     "start": "next start",
     "lint": "next lint"
   },
@@ -26,6 +22,9 @@
     "eslint-config-next": "12.1.4",
     "netlify-cli": "^8.14.1",
     "postcss": "^8.4.12",
-    "tailwindcss": "^3.0.24"
+    "tailwindcss": "^3.0.24",
+    "webpack": "^5.72.0",
+    "webpack-cli": "^4.9.2",
+    "webpack-dev-server": "^3.11.2"
   }
 }
